@@ -1,0 +1,47 @@
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 670px;
+  min-width: 380px;
+}
+
+.header {
+  display: flex;
+}
+
+.header .space {
+  flex-grow: 1;
+}
+
+.header a {
+  padding: 16px;
+}
+
+.body {
+  padding: 0 16px;
+  overflow: hidden;
+}
+
+.footer {
+  padding: 16px;
+  color: var(--main-subdue-color);
+}
+
+.languages {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: row;
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+  font-weight: 400;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}

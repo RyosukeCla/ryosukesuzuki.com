@@ -1,0 +1,26 @@
+.links > * {
+  margin-right: 16px;
+}
+
+.hero {
+  width: 100%;
+  width: calc(100% + 32px);
+  height: 300px !important;
+  margin: 0 -16px;
+  position: relative;
+  border-radius: 4px;
+  background: var(--main-code-bg-color);
+}
+.hero img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+.hero[data-filter] {
+  filter: contrast(115%) grayscale(90%) saturate(190%);
+}
+
+@media screen and (max-width: 670px) {
+  .hero {
+    border-radius: 0;
+  }
+}
