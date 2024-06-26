@@ -16,7 +16,7 @@ export type Localization = {
 
 const belongings = () => {
   return <>
-    - Co-Founder / Co-CEO of <Link href="https://yeyinc.com">Yey Algorithm, Inc.</Link><br />
+    - Co-Founder of <Link href="https://yeyalgorithm.com">Yey Algorithm, Inc.</Link><br />
     - Ex-Software Engineer at <Link href="https://plaid.co.jp">Plaid, Inc.</Link>
   </>
 }
