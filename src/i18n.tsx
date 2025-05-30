@@ -16,7 +16,7 @@ export type Localization = {
 
 const belongings = () => {
   return <>
-    - Founder of <Link href="https://yeyalgorithm.com">Yey Algorithm, Inc.</Link><br />
+    - Founder of <Link href="https://u17g.com">Ubounded Pioneering.</Link><br />
     - Ex-Software Engineer at <Link href="https://plaid.co.jp">Plaid, Inc.</Link>
   </>
 }
@@ -25,10 +25,10 @@ export const en: Localization = {
   lang: 'en',
   author: "Ryosuke Suzuki",
   title: "Ryosuke Suzuki",
-  description: "I am Ryosuke Suzuki, a tech entrepreneur in Tokyo. I am passionate about creating something that makes the world a better place.",
+  description: "I am Ryosuke Suzuki, a tech entrepreneur in Tokyo.",
 
-  profileGreeting: "Hello!",
-  profileBody: "I am Ryosuke Suzuki, a tech entrepreneur in Tokyo, born in 1996, finished a degree of mathematics, and loving singing✌️",
+  profileGreeting: "Hi",
+  profileBody: "I am Ryosuke Suzuki, a tech entrepreneur in Tokyo.",
 
   belongings: belongings(),
 };
@@ -37,10 +37,10 @@ export const ja: Localization = {
   lang: 'ja',
   author: "鈴木 凌介",
   title: "鈴木 凌介",
-  description: "私は日本のテック起業家、鈴木凌介です。世界をより良い場所にする何かを創造することに情熱を持っています。",
+  description: "こんにちは、鈴木凌介です。",
 
-  profileGreeting: "こんにちは！",
-  profileBody: "こんにちは、鈴木 凌介 (スズキ リョウスケ)です。1996年生まれ、数学の学位を取得し、歌うことが大好きな、テック起業家です✌️",
+  profileGreeting: "こんにちは",
+  profileBody: "こんにちは、鈴木凌介です。起業家です。",
 
   belongings: belongings(),
 };
