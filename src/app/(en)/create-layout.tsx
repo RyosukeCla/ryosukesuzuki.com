@@ -39,15 +39,6 @@ export function createRootLayout(info: Localization) {
         </head>
         <body>
           <div className={styles.container}>
-            <header className={styles.header}>
-              <Link href="/" data-header>
-                Ryosuke Suzuki
-              </Link>
-              <div className={styles.space} />
-              {/* <Link href="/archive"> */}
-              {/* <a data-menu>Archive</a> */}
-              {/* </Link> */}
-            </header>
             <div className={styles.body}>
               {children}
             </div>
