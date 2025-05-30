@@ -15,15 +15,6 @@ const Icon = ({ src, href }: { src: string; href: string }) => {
 export function createPage(info: Localization) {
   return () => {
     return <div>
-      <div className={styles.hero} data-filter>
-        <Image
-          src={hero}
-          alt={info.author}
-          loading="lazy"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
       <h1 data-title>{info.profileGreeting}</h1>
       <p>{info.profileBody}</p>
 
