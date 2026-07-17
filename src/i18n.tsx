@@ -17,7 +17,7 @@ export type Localization = {
 const belongings = () => {
   return <>
     - Founder of <Link href="https://u17g.com">Ubounded Pioneering.</Link><br />
-    - Building <Link href="https://turnint.ai">Turnint AI</Link><br />
+    - Building <Link href="https://timothe.ai">Timothe AI</Link><br />
     - Ex-Software Engineer at <Link href="https://plaid.co.jp">Plaid, Inc.</Link>
   </>
 }
