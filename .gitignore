@@ -1,3 +1,5 @@
 node_modules
-out
-.next
+.svelte-kit
+build
+.vercel
+.DS_Store
