@@ -62,7 +62,10 @@ Setup で Question をオーディエンスに Open にして、Payoff で Quesi
 構成要素
 - Question: 約束するもの。オーディエンスが持つ問い。いつ終わるの？どうなるの？成功するの？結論は？どう関係するの？という問い。
 - Setup: オーディエンスに Question を植え付けるための瞬間、方法、手法
-- Stakes: どれだけ Question を大きくするか。大きいほど、Horizon を伸ばせる。
+- Stakes: 答えが来ないと誰が、どれほど困るか。
+    - オーディエンス
+    - 登場人物
+    - 誰も困らない
 - Horizon: いつ、Question への答えがペイオフされるか、どこまで待たせるか。
 - Payoff: ペイオフ。Question に対しての答え
     - Confirm: 予想した通りの答え
