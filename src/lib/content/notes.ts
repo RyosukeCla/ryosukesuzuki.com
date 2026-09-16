@@ -22,7 +22,7 @@ export interface NoteMeta {
 
 export interface Note extends NoteMeta {
 	lang: Lang;
-	/** URL path without the leading slash or language: `the-concept-of-audience/genre`; a section's index is just `the-concept-of-audience`. */
+	/** URL path without the leading slash or language: `pay-attention-please/promise`; a section's index is just `pay-attention-please`. */
 	path: string;
 	/** True for the `index` note of a section: its landing page. */
 	isIndex: boolean;
@@ -32,7 +32,7 @@ export interface Note extends NoteMeta {
 }
 
 /** Sections in the order the index shows them; titles come from i18n messages. */
-export const SECTION_ORDER = ['the-concept-of-audience'];
+export const SECTION_ORDER = ['pay-attention-please'];
 
 interface NoteModule {
 	metadata: NoteMeta;

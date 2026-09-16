@@ -12,7 +12,7 @@ export function langFromParam(param: string | undefined): Lang {
 	return isLang(param) ? param : DEFAULT_LANG;
 }
 
-/** `/audience/x` for the default language, `/en/audience/x` for the other. */
+/** `/pay-attention-please/x` for the default language, `/en/pay-attention-please/x` for the other. */
 export function localizePath(path: string, lang: Lang): string {
 	const clean = path.startsWith('/') ? path : `/${path}`;
 	if (lang === DEFAULT_LANG) return clean;
@@ -31,10 +31,10 @@ export function delocalizePath(pathname: string): string {
 
 export const messages = {
 	ja: {
-		siteName: '鈴木 凌介',
-		description: '鈴木凌介。東京の起業家。時系列ではなく、書き足していくノート。',
+		siteName: 'Ryosuke Suzuki',
+		description: 'Ryosuke Suzuki, a tech entrepreneur in Tokyo.',
 		greeting: 'こんにちは',
-		bio: '鈴木凌介です。東京で起業しています。',
+		bio: '鈴木凌介です',
 		belongings: [
 			{ text: 'Unbounded Pioneering を創業', href: 'https://u17g.com' },
 			{ text: 'Snip0 を作っています。スマホの動画編集アプリ', href: 'https://snip0.com' },
@@ -45,15 +45,15 @@ export const messages = {
 		updated: '更新',
 		otherLang: 'English',
 		sections: {
-			'the-concept-of-audience': {
-				title: 'The Concept of Audience',
-				intro: 'audience とは何か。何を認識し、何を待ち、どう払われ、なぜ留まるか。1 概念 1 ページ、部品と関係と根拠つき。'
+			'pay-attention-please': {
+				title: 'Pay Attention Please',
+				intro: '人はなぜ見続けるのか'
 			}
 		} as Record<string, { title: string; intro: string }>
 	},
 	en: {
 		siteName: 'Ryosuke Suzuki',
-		description: 'Ryosuke Suzuki, a tech entrepreneur in Tokyo. Notes that accumulate.',
+		description: 'Ryosuke Suzuki, a tech entrepreneur in Tokyo.',
 		greeting: 'Hi',
 		bio: 'I am Ryosuke Suzuki, a tech entrepreneur in Tokyo.',
 		belongings: [
@@ -66,9 +66,9 @@ export const messages = {
 		updated: 'Updated',
 		otherLang: '日本語',
 		sections: {
-			'the-concept-of-audience': {
-				title: 'The Concept of Audience',
-				intro: 'What an audience is: what it recognises, what it waits for, how it is paid, why it stays. One concept per page, with the parts, the relations and the research behind them.'
+			'pay-attention-please': {
+				title: 'Pay Attention Please',
+				intro: 'An anatomy of attention, and why people stay.'
 			}
 		} as Record<string, { title: string; intro: string }>
 	}
