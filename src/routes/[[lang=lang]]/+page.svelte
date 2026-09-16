@@ -24,13 +24,8 @@
 
 {#snippet row(note: Note)}
 	<li class="my-5 list-none pl-0">
-		<div class="flex items-baseline gap-3">
-			<span class="w-6 shrink-0 text-sm tabular-nums text-[var(--color-subdue)]">
-				{note.order !== undefined ? String(note.order).padStart(2, '0') : ''}
-			</span>
-			<a href={localizePath(`/${note.path}`, data.lang)}>{note.title}</a>
-		</div>
-		<p class="my-1 ml-9 text-sm leading-relaxed text-[var(--color-subdue)]">
+		<a href={localizePath(`/${note.path}`, data.lang)}>{note.title}</a>
+		<p class="my-1 text-sm leading-relaxed text-[var(--color-subdue)]">
 			{#if note.description}{note.description}<br />{/if}
 			{m.updated} <time datetime={note.updated}>{fmt.format(new Date(`${note.updated}T00:00:00`))}</time>
 		</p>
