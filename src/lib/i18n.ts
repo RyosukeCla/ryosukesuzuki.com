@@ -41,7 +41,6 @@ export const messages = {
 			{ text: '元 Plaid, Inc. のソフトウェアエンジニア', href: 'https://plaid.co.jp' }
 		],
 		notes: 'ノート',
-		notesIntro: 'ブログではありません。ページは書き足され、その場で書き直されます。各ページに最終更新日があります。',
 		pages: 'ページ',
 		updated: '更新',
 		otherLang: 'English',
@@ -63,7 +62,6 @@ export const messages = {
 			{ text: 'Ex-Software Engineer at Plaid, Inc.', href: 'https://plaid.co.jp' }
 		],
 		notes: 'Notes',
-		notesIntro: 'Not a blog. Pages here accumulate and are rewritten in place; each shows when it last changed.',
 		pages: 'Pages',
 		updated: 'Updated',
 		otherLang: '日本語',

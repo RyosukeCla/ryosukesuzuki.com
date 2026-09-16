@@ -1,14 +1,184 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
+
+/* The site's own look, carried over from the previous build: Outfit, 18px, a 670px column,
+   plain links that dim on hover. Tailwind is here for layout utilities; the type and the
+   element styles below are the design. */
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-display: swap;
+}
 
 @theme {
-	--font-sans:
-		ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-		'Hiragino Sans', 'Noto Sans JP', sans-serif;
+	--font-sans: 'Outfit', 'メイリオ', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+	--color-text: rgb(43, 43, 43);
+	--color-subdue: #6b6b6b;
+	--color-code-bg: hsl(220, 13%, 18%);
+	--color-code: hsl(220, 14%, 90%);
 }
 
 @layer base {
-	:focus-visible {
-		outline-color: var(--color-zinc-900);
+	html,
+	body {
+		padding: 0;
+		margin: 0;
+		color: var(--color-text);
+		font-size: 18px;
+		font-family: var(--font-sans);
+		background: #fff;
+	}
+
+	a {
+		color: var(--color-text);
+		text-decoration: underline;
+		transition: opacity 0.1s ease-in-out;
+	}
+	a:hover {
+		opacity: 0.6;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 1.5;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 40px;
+		margin-bottom: 24px;
+		font-weight: 700;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	h1[data-title] {
+		margin: 32px 0;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4,
+	h5,
+	h6 {
+		font-size: 18px;
+	}
+
+	p {
+		margin: 16px 0;
+	}
+
+	small {
+		font-size: 14px;
+	}
+
+	pre {
+		overflow-x: auto;
+		padding: 16px;
+		border-radius: 4px;
+		margin: 32px 0;
+		background: var(--color-code-bg);
+		color: var(--color-code);
+	}
+	code {
+		font-family: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, monospace;
+		background: var(--color-code-bg);
+		color: var(--color-code);
+		padding: 0 4px;
+		border-radius: 4px;
+	}
+	pre > code {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 0;
+	}
+
+	blockquote {
+		position: relative;
+		margin: 32px 0;
+		color: var(--color-subdue);
+	}
+	blockquote::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 4px;
+		border-radius: 8px;
+		opacity: 0.4;
+		background: var(--color-subdue);
+	}
+	blockquote > * {
+		padding: 16px;
+	}
+
+	ul,
+	ol {
+		padding-left: 24px;
+		margin: 16px 0;
+		line-height: 1.7;
+		list-style: inside;
+	}
+	li ol,
+	li ul {
+		margin: 0;
+	}
+	ul > li {
+		list-style: disc;
+	}
+	ol > li {
+		list-style: decimal;
+	}
+	ol ol > li {
+		list-style: lower-roman;
+	}
+	ol ol ol > li {
+		list-style: lower-alpha;
+	}
+	li {
+		margin: 0.8px 0;
+		padding-left: 8px;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 24px 0;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	th,
+	td {
+		text-align: left;
+		vertical-align: top;
+		padding: 8px 12px 8px 0;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	th {
+		font-weight: 600;
+		color: var(--color-subdue);
+	}
+
+	hr {
+		border: 0;
+		border-top: 1px solid #e5e5e5;
+		margin: 32px 0;
 	}
 }

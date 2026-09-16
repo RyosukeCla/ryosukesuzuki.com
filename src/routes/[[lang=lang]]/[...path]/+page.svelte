@@ -27,18 +27,13 @@
 
 <Seo title={meta.title} description={meta.description} type="article" updated={meta.updated} availableLangs={data.availableLangs} {jsonLd} />
 
-<article class="py-8">
-	<header class="mb-10">
-		{#if sectionTitle}
-			<p class="text-xs font-semibold tracking-[0.18em] text-zinc-400 uppercase">{sectionTitle}</p>
-		{/if}
-		<h1 class="mt-2 text-3xl font-bold tracking-tight">{meta.title}</h1>
-		<p class="mt-3 text-zinc-500">{meta.description}</p>
-		<p class="mt-3 text-sm text-zinc-400">
-			{m.updated} <time datetime={meta.updated}>{fmt.format(new Date(`${meta.updated}T00:00:00`))}</time>
-		</p>
-	</header>
-	<div class="prose prose-zinc max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-zinc-900">
-		<Content />
-	</div>
-</article>
+<p class="mt-8"><small><a href={localizePath('/', data.lang)}>Ryosuke Suzuki</a>{#if sectionTitle} / {sectionTitle}{/if}</small></p>
+<h1 data-title>{meta.title}</h1>
+{#if meta.description}
+	<p class="text-[var(--color-subdue)]">{meta.description}</p>
+{/if}
+<p class="text-[var(--color-subdue)]">
+	<small>{m.updated} <time datetime={meta.updated}>{fmt.format(new Date(`${meta.updated}T00:00:00`))}</time></small>
+</p>
+
+<Content />
