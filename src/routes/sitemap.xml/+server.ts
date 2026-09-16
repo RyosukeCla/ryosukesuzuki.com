@@ -1,14 +1,15 @@
 import { SITE_URL } from '$lib/config';
 import { allNotes, lastUpdated } from '$lib/content/notes';
+import { LANGS, localizePath } from '$lib/i18n';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = () => {
-	const urls = [
-		{ loc: `${SITE_URL}/`, lastmod: lastUpdated() },
-		...allNotes().map((n) => ({ loc: `${SITE_URL}/${n.path}`, lastmod: n.updated }))
-	];
+	const urls = LANGS.flatMap((lang) => [
+		{ loc: `${SITE_URL}${localizePath('/', lang)}`, lastmod: lastUpdated(lang) },
+		...allNotes(lang).map((n) => ({ loc: `${SITE_URL}${localizePath(`/${n.path}`, lang)}`, lastmod: n.updated }))
+	]);
 	const entries = urls
 		.map(
 			({ loc, lastmod }) =>

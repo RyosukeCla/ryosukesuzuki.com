@@ -1,11 +1,12 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
+import type { Lang } from '$lib/i18n';
+
 declare global {
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		interface PageData {
+			lang: Lang;
+			/** Languages the current page exists in; drives hreflang. */
+			availableLangs?: Lang[];
+		}
 	}
 }
 
