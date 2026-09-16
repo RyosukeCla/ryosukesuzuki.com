@@ -46,10 +46,9 @@ export const messages = {
 		otherLang: 'English',
 		sections: {
 			'pay-attention-please': {
-				title: 'Pay Attention Please',
-				intro: '人はなぜ見続けるのか'
+				title: 'Pay Attention Please'
 			}
-		} as Record<string, { title: string; intro: string }>
+		} as Record<string, { title: string }>
 	},
 	en: {
 		siteName: 'Ryosuke Suzuki',
@@ -67,10 +66,9 @@ export const messages = {
 		otherLang: '日本語',
 		sections: {
 			'pay-attention-please': {
-				title: 'Pay Attention Please',
-				intro: 'An anatomy of attention, and why people stay.'
+				title: 'Pay Attention Please'
 			}
-		} as Record<string, { title: string; intro: string }>
+		} as Record<string, { title: string }>
 	}
 } satisfies Record<Lang, unknown>;
 

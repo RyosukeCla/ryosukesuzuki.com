@@ -23,17 +23,17 @@
 </script>
 
 {#snippet row(note: Note)}
-	<li>
-		<a href={localizePath(`/${note.path}`, data.lang)}>
-			{#if note.order !== undefined}<span class="tabular-nums text-[var(--color-subdue)]">{String(note.order).padStart(2, '0')}</span>{/if}
-			{note.title}
-		</a>
-		{#if note.description}
-			<span class="text-[var(--color-subdue)]"> — {note.description}</span>
-		{/if}
-		<small class="text-[var(--color-subdue)]">
-			({m.updated} <time datetime={note.updated}>{fmt.format(new Date(`${note.updated}T00:00:00`))}</time>)
-		</small>
+	<li class="my-5 list-none pl-0">
+		<div class="flex items-baseline gap-3">
+			<span class="w-6 shrink-0 text-sm tabular-nums text-[var(--color-subdue)]">
+				{note.order !== undefined ? String(note.order).padStart(2, '0') : ''}
+			</span>
+			<a href={localizePath(`/${note.path}`, data.lang)}>{note.title}</a>
+		</div>
+		<p class="my-1 ml-9 text-sm leading-relaxed text-[var(--color-subdue)]">
+			{#if note.description}{note.description}<br />{/if}
+			{m.updated} <time datetime={note.updated}>{fmt.format(new Date(`${note.updated}T00:00:00`))}</time>
+		</p>
 	</li>
 {/snippet}
 
@@ -67,10 +67,7 @@
 			{info?.title ?? section.id}
 		{/if}
 	</h3>
-	{#if info?.intro}
-		<p class="text-[var(--color-subdue)]"><small>{info.intro}</small></p>
-	{/if}
-	<ul>
+	<ul class="my-4 list-none pl-0">
 		{#each section.notes as note (note.path)}
 			{@render row(note)}
 		{/each}
@@ -79,7 +76,7 @@
 
 {#if data.pages.length}
 	<h3>{m.pages}</h3>
-	<ul>
+	<ul class="my-4 list-none pl-0">
 		{#each data.pages as note (note.path)}
 			{@render row(note)}
 		{/each}
