@@ -118,7 +118,7 @@ Berridge の研究によると、「Wanting」と「Liking」は、脳科学的�
 
 つまり、アテンションのメカニズムに当てはめるのであれば、この２つの領域に対しての Promise を同時に持つと、アテンションを最大化することができる。それを Two-Promise Rule と呼ぶことにする。
 
-Two-Promise Rules:
+Two-Promise Rule:
 - Wanting の Promise で、最後まで open な状態を作る。
 - Linking の Promise で、毎秒オーディエンスに payoff し続ける。
 
