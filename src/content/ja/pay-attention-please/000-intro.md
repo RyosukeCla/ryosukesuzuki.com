@@ -103,6 +103,7 @@ Setup で Question をオーディエンスに Open にして、Payoff で Quesi
         - Horizon: 1拍、1ビートごと
         - Stakes: 低い。
         - 例: ダンス、リズムネタ、カット割り
+        - 受け手が次を予測できること。予測ができるから、来たときに、payoff が起きる。
     - Feeling
         - Question: この気持ちは続く？
         - Horizon: 毎秒
